@@ -1,6 +1,9 @@
 ## Intro
 **colorPresenter** is beautiful solution for online stores and websites to present available colors of products. You does not need any images anymore, only colors in HEX format.
 
+## Demo
+[http://colorPresenter.nikolay.ws/](http://colorPresenter.nikolay.ws/)
+
 ## Install
 For use you have to require Jquery like this:  
 `<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>`  
