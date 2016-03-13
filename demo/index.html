@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>colorPresenter Demo</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+
+<div class="container">
+
+    <div class="text-center">
+        <h1>colorPresenter</h1>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href='#intro'>Intro</a></li>
+                    <li><a href='#install'>Install</a></li>
+                    <li><a href='#params'>Params</a></li>
+                    <li><a href='#examples'>Examples</a></li>
+                    <li><a href='#download'>Download</a></li>
+                    <li><a href='#git'>Git</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <a class='header' name="intro"><h2>Intro</h2></a>
+
+    <div class="col-md-12">
+        <b>colorPresenter</b> is beautiful solution for online stores and websites to present available colors of
+        products. You does not need any images anymore, only colors in HEX format.
+    </div>
+    <br/><br/>
+
+    <a class='header' name="install"><h2>Install</h2></a>
+
+    For use you have to require Jquery like this:<br/>
+    <code>&lt;script src=&quot;https://code.jquery.com/jquery-1.12.1.min.js&quot;&gt;&lt;/script&gt;</code><br/><br/>
+    and now you can require colorPresentor:<br/>
+    <code>&lt;script src=&quot;../src/colorPresenter.js&quot;&gt;&lt;/script&gt;</code>
+
+    <br/><br/>
+
+    <a class='header' name="params"><h2>Params</h2></a>
+    You can management plugin used two params:
+    <table class="tbl table">
+        <tr>
+            <td><b>colors</b></td>
+            <td class="tbl-space">&nbsp;</td>
+            <td>Array with colors. Array can be:
+                <ul>
+                    <li>one-level: simple one-row widget</li>
+                    <li>two-level: simple multi-row widget</li>
+                    <li>three-level: multi-row widget with gradients</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><b>rounded</b></td>
+            <td class="tbl-space">&nbsp;</td>
+            <td>if this param is 'true', then the widget will be rounded.</td>
+        </tr>
+    </table>
+    But enough words, let me show you examples:
+    <br/><br/>
+
+    <a class='header' name="examples"><h2>Examples</h2></a>
+
+
+    <div class="col-md-12">
+        <h3>Square</h3>
+        <div class="col-md-3">
+            <div class="colorPresenter" id="colorPresenter-1"></div>
+        </div>
+        <div class="col-md-9">
+            The simplest example one-row square color block.
+            <br/>
+            <code>
+                &lt;script&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;$('document').ready(function(){<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('.colorPresentator-1').colorPresentator({<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'colors': ['#3e9e35', '#fff']<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;});<br/>
+                &lt;/script&gt;<br/>
+            </code>
+        </div>
+    </div>
+
+
+    <div class="col-md-12">
+        <h3>Rounded Form</h3>
+        <div class="col-md-3">
+            <div class="colorPresenter" id="colorPresenter-2"></div>
+        </div>
+        <div class="col-md-9">
+            Simple round form.
+            <br/>
+            <code>
+                &lt;script&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;$('document').ready(function(){<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('.colorPresentator-2').colorPresentator({<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'colors': ['#D91500', '#6555ff'],<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'rounded': true<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;});<br/>
+                &lt;/script&gt;<br/>
+            </code>
+        </div>
+    </div>
+
+
+    <div class="col-md-12">
+        <h3>Gradient</h3>
+        <div class="col-md-3">
+            <div class="colorPresenter" id="colorPresenter-6"></div>
+        </div>
+        <div class="col-md-9">
+            Do you need gradient colors? It's not big deal!
+            <br/>
+            <code>
+                &lt;script&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;$('document').ready(function(){<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('.colorPresentator-6').colorPresentator({<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'colors': [[['#6555ff','#fff'], ['#fff','#6555ff']]],<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'rounded': true<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;});<br/>
+                &lt;/script&gt;
+            </code>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <h3>Multi-Row</h3>
+        <div class="col-md-3">
+            <div class="colorPresenter" id="colorPresenter-3"></div>
+        </div>
+        <div class="col-md-9">
+            The really magic multi-row color blocks.
+            <br/>
+            <code>
+                &lt;script&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;$('document').ready(function(){<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('.colorPresentator-3').colorPresentator({<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'colors': [['#000'], ['#D91500', '#FBD233', '#D91500'], ['#FBD233', '#D91500', '#FBD233'],
+                ['#000']],<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'rounded': true<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;});<br/>
+                &lt;/script&gt;
+            </code>
+        </div>
+    </div>
+
+
+    <div class="col-md-12">
+        <h3>Flag</h3>
+        <div class="col-md-3">
+            <div class="colorPresenter" id="colorPresenter-4"></div>
+        </div>
+        <div class="col-md-9">
+            or draw a flag ;)
+            <br/>
+            <code>
+                &lt;script&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;$('document').ready(function(){<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('.colorPresentator-4').colorPresentator({<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'colors': [['#fff'], ['#6555ff'], ['#D91500']],<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'rounded': true<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;});<br/>
+                &lt;/script&gt;
+            </code>
+        </div>
+    </div>
+
+
+    <div class="col-md-12">
+        <h3>Diagonal</h3>
+        <div class="col-md-3">
+            <div class="colorPresenter" id="colorPresenter-5"></div>
+        </div>
+        <div class="col-md-9">
+            a little bit CSS and you can much more!<br/>
+            <code>
+                &lt;style&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;#colorPresenter-5{<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-ms-transform: rotate(45deg); /* IE 9 */<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform: rotate(45deg);<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+                <br/>
+                &lt;/style&gt;<br/><br/>
+                &lt;script&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;$('document').ready(function () {<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('.colorPresentator-5').colorPresentator({<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'colors': [['#000'], ['#fff'], ['#000']],<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'rounded': true<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;});<br/>
+                &lt;/script&gt;
+            </code>
+        </div>
+    </div>
+
+    <br/><br/>
+
+    <a class='header' name="download"><h2>Download</h2></a>
+
+    Here is link to download: <a href="http://colorpresenter.nikolay.ws/src/colorPresenter.js">http://colorpresenter.nikolay.ws/src/colorPresenter.js</a><br/>
+
+    <span class="label label-danger">P.S. Please don´t use this website as CDN make a local copy of plugin.</span>
+
+    <br/><br/>
+    <a class='header' name="git"><h2>Git</h2></a>
+
+    The plugin is available at Github: <a href="#"></a>
+    <br/><br/>
+
+</div>
+
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<!-- colorPresenter -->
+<script src="../src/colorPresenter.js"></script>
+
+<script>
+    $('document').ready(function(){
+        $('#colorPresenter-1').colorPresenter({
+            'colors': ['#3e9e35', '#fff', '#3e9e35']
+        });
+
+        $('#colorPresenter-2').colorPresenter({
+            'colors': ['#D91500', '#6555ff'],
+            'rounded': true
+        });
+
+        $('#colorPresenter-3').colorPresenter({
+            'colors': [['#000'], ['#D91500', '#FBD233', '#D91500'], ['#FBD233', '#D91500', '#FBD233'],
+                ['#000']],
+            'rounded': true
+        });
+
+        $('#colorPresenter-4').colorPresenter({
+            'colors': [['#fff'], ['#6555ff'], ['#D91500']],
+            'rounded': true
+        });
+
+        $('#colorPresenter-5').colorPresenter({
+            'colors': ['#000', '#fff', '#000'],
+            'rounded': true
+        });
+
+        $('#colorPresenter-6').colorPresenter({
+            'colors': [[['#6555ff','#fff'], ['#fff','#6555ff']]],
+            'rounded': true
+        });
+
+    });
+</script>
+
+
+</body>
+</html>

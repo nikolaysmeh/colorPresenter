@@ -1,0 +1,25 @@
+.colorPresenter {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #b2b2b2;
+}
+
+#colorPresenter-5{
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+.header h2, .header:active h2{
+    text-decoration: none;
+    color:#000;
+}
+
+.tbl tr td {
+    vertical-align: top;
+}
+
+.tbl-space{
+    width: 40px;
+    min-width: 40px;
+}
